@@ -1,0 +1,26 @@
+<!-- data/default.earth -->
+<map name="Default Map">
+    <!-- Add a base imagery layer -->
+    <image name="readymap_imagery" driver="xyz">
+        <url>http://readymap.org/readymap/tiles/1.0.0/7/{z}/{x}/{y}.png</url>
+        <profile>spherical-mercator</profile>
+    </image>
+    
+    <!-- Add elevation data -->
+    <elevation name="readymap_elevation" driver="tms">
+        <url>http://readymap.org/readymap/tiles/1.0.0/116/{z}/{x}/{y}.png</url>
+        <profile>spherical-mercator</profile>
+    </elevation>
+    
+    <!-- Example of loading a Cesium 3D Tiles dataset -->
+    <CesiumNative3DTiles name="agi">
+        <url>https://pelican-public.s3.amazonaws.com/3dtiles/agi-hq/tileset.json</url>
+    </CesiumNative3DTiles>
+    
+    <!-- Example of loading Cesium Ion asset -->
+    <!-- Uncomment and replace YOUR_KEY in the environment variable to use
+    <CesiumNative3DTiles name="New York">
+        <asset_id>57587</asset_id>
+    </CesiumNative3DTiles>
+    -->
+</map>
